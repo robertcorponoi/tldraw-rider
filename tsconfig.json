@@ -1,0 +1,12 @@
+{
+	"files": [],
+	/**
+	 * Splits our app and vite config into two separate tsconfig files.
+	 *
+	 * https://www.typescriptlang.org/tsconfig/#references
+	 */
+	"references": [
+		{ "path": "./tsconfig.app.json" },
+		{ "path": "./tsconfig.node.json" }
+	]
+}
