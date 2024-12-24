@@ -174,8 +174,7 @@ export class TldrawRiderShapeUtil extends ShapeUtil<ITldrawRiderShape> {
 				// set it to `9.81`.
 				const gravity = {
 					x: 0.0,
-					y: 0.0,
-					//	y: 9.81,
+					y: 9.81,
 				};
 				const world = new RAPIER.World(gravity);
 
@@ -321,8 +320,6 @@ export class TldrawRiderShapeUtil extends ShapeUtil<ITldrawRiderShape> {
 					}
 				);
 
-				riderRigidBody.applyTorqueImpulse(0.0001, true);
-
 				/**
 				 * The game loop. Everything in this loop runs up to 60 times
 				 * per second.
@@ -394,7 +391,7 @@ export class TldrawRiderShapeUtil extends ShapeUtil<ITldrawRiderShape> {
 					// **Note:* This is not optimized so a lot of colliders or
 					// complex shapes will slow down the editor. Only use this
 					// to debug colliders.
-					createDebugLines(world, this.editor);
+					// createDebugLines(world, this.editor);
 
 					// Run the game loop 60 frames per second.
 					requestAnimationFrame(gameLoop);
